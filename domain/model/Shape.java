@@ -2,7 +2,6 @@ package domain.model;
 
 public abstract class Shape {
     private int x=0;
-    private int y=0;
     public Shape(int newx, int newy){ //constructor
         setx(newx);
         setx(newy);
