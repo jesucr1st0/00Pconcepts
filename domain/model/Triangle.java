@@ -1,29 +1,39 @@
 package domain.model;
 
 public class Triangle extends Shape{
-    private int height=0;
-    private int Base=0;
-    public int getheight(){
-        return height;
+    private int sizeA=0;
+    private int sizeB=0;
+    private int sizeC=0;
+    public int getsizeA(){
+        return sizeA;
     }
-    public void setHeight(int newHeight){
-        if(newHeight>=0)
-        height=newHeight;
+    public void setsizeA(int newheight){
+        if(newheight>=0)
+        sizeA=newheight;
     }
-    public int getBase(){
-        return Base;
+    public int getsizeB(){
+        return sizeB;
     }
-    public void setBase(int newBase){
+    public void setsizeB(int newBase){
         if(newBase>=0)
-        Base=newBase;
+        sizeB=newBase;
 
+    }
+    public int getsizeC(){
+        return sizeC;
+    }
+    public void setsizeC(int newsize){
+        if(newsize>=0)
+        sizeC=newsize;
     }
     @Override
     public int getArea() {
-        return (getheight()*getBase())/2;
+        double A =getPerimeter()/2*((getPerimeter()-getsizeA())*(getPerimeter()-getsizeB())*(getPerimeter()-getsizeC()));
+        A =Math.sqrt(A);
+        return (int)A;
     }
     @Override
     public int getPerimeter() {
-        return 4*getWidth();
+        return getsizeA()+getsizeB()+getsizeC();
     }
 }

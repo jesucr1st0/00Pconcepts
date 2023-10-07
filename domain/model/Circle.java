@@ -1,6 +1,13 @@
 package domain.model;
 
 public class Circle extends Shape{
+    public Circle(int newx,int newy,int newRadius){
+        super(newx,newy);
+        setRadius(newRadius);
+    }
+    public Circle(int newRadius){
+        this(0,0,newRadius);
+    }
     private double radius=0;
     public double getRadius(){
         return radius;

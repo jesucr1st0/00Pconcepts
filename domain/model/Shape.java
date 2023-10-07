@@ -8,7 +8,6 @@ public abstract class Shape {
         setx(newy);
 
     }
-
     public Shape(){
     }
     public void setx(int newx){

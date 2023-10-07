@@ -1,6 +1,13 @@
 package domain.model;
 
 public class Square extends Shape {
+    public Square(int newx,int newy,int newWidth){
+        super(newx,newy);
+        setWidth(newWidth);
+    }
+    public Square(int newWidth){
+        this(0,0,newWidth);
+    }
     private int width=0;
     public int getWidth(){
         return width;
@@ -21,6 +28,6 @@ public class Square extends Shape {
     }
     @Override
     public int getPerimeter() {
-        return 4*getWidth();
+        return 2*(getWidth()+getHeight());
     }
 }
